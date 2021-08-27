@@ -9,8 +9,13 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
+        Text("SpaceXLauncher")
             .padding()
+            .foregroundColor(.green)
+            .font(.largeTitle)
+            .frame(width: UIScreen.main.bounds.width,
+                   height: UIScreen.main.bounds.height/5,
+                   alignment: .center)
     }
 }
 
