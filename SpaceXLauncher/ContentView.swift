@@ -6,16 +6,29 @@
 //
 
 import SwiftUI
-
+import Apollo
 struct ContentView: View {
+    
+    @State var tagLine = "SpaceXLauncher"
+    
     var body: some View {
-        Text("SpaceXLauncher")
+        Text(tagLine)
             .padding()
             .foregroundColor(.green)
             .font(.largeTitle)
             .frame(width: UIScreen.main.bounds.width,
                    height: UIScreen.main.bounds.height/5,
-                   alignment: .center)
+                   alignment: .center).onAppear(perform: {
+                    Network.shared.client.fetch(query: GetLaunchPastQuery()) { (result) in
+                        switch result {
+                        case .success(let data):
+                            tagLine = data.data?.launchesPast?.first??.missionName ?? "No mission name 🤔"
+                        case .failure(let error):
+                            print("ERROR! : \(error)")
+                            
+                        }
+                    }
+                   })
     }
 }
 
