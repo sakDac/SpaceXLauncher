@@ -11,7 +11,7 @@ import SwiftUI
 struct SpaceXLauncherApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            LauncherList()
         }
     }
 }
