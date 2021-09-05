@@ -12,6 +12,7 @@ public final class GetLaunchPastQuery: GraphQLQuery {
       launchesPast(limit: 10) {
         __typename
         mission_name
+        details
       }
     }
     """
@@ -56,6 +57,7 @@ public final class GetLaunchPastQuery: GraphQLQuery {
         return [
           GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
           GraphQLField("mission_name", type: .scalar(String.self)),
+          GraphQLField("details", type: .scalar(String.self)),
         ]
       }
 
@@ -65,8 +67,8 @@ public final class GetLaunchPastQuery: GraphQLQuery {
         self.resultMap = unsafeResultMap
       }
 
-      public init(missionName: String? = nil) {
-        self.init(unsafeResultMap: ["__typename": "Launch", "mission_name": missionName])
+      public init(missionName: String? = nil, details: String? = nil) {
+        self.init(unsafeResultMap: ["__typename": "Launch", "mission_name": missionName, "details": details])
       }
 
       public var __typename: String {
@@ -84,6 +86,15 @@ public final class GetLaunchPastQuery: GraphQLQuery {
         }
         set {
           resultMap.updateValue(newValue, forKey: "mission_name")
+        }
+      }
+
+      public var details: String? {
+        get {
+          return resultMap["details"] as? String
+        }
+        set {
+          resultMap.updateValue(newValue, forKey: "details")
         }
       }
     }

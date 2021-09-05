@@ -11,10 +11,12 @@ import Apollo
 struct Launch: Identifiable {
     var id = UUID()
     let missionName: String
+    let details: String
 }
 
 extension Launch {
     init?(launchesPast: GetLaunchPastQuery.Data.LaunchesPast?) {
-        self.missionName = launchesPast?.missionName ?? ""
+        self.missionName = launchesPast?.missionName ?? "No mission name"
+        self.details = launchesPast?.details ?? "No details"
     }
 }
