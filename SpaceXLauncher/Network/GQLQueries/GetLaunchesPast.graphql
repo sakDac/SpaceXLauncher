@@ -1,5 +1,5 @@
-query getLaunchPast {
-  launchesPast(limit: 10) {
+query getLaunchPast($count: Int) {
+  launchesPast(limit: $count) {
     mission_name
     details
   }
