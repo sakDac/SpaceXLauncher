@@ -13,3 +13,4 @@ class Network {
     static let shared = Network()
     lazy var client = ApolloClient(url: url!)
 }
+// ⚠️ TODO: use : https://stackoverflow.com/questions/56545572/how-can-i-load-an-uiimage-into-a-swiftui-image-asynchronously for image dowloading ⚠️

@@ -1,6 +1,9 @@
 query getLaunchPast($count: Int) {
   launchesPast(limit: $count) {
     mission_name
+    links {
+        flickr_images
+    }
     details
   }
 }
