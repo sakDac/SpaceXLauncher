@@ -10,9 +10,9 @@ import SwiftUI
 struct LaunchRow: View {
     var launch: Launch
     var body: some View {
-        VStack(alignment: .center, spacing: .some(10.0), content: {
+        VStack(alignment: .leading, spacing: .some(10.0), content: {
             Text(launch.missionName).font(.headline)
-            Text(launch.details).font(.body)
+            Text(launch.details).font(.subheadline)
         })
     }
 }
