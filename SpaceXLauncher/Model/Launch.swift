@@ -12,11 +12,13 @@ struct Launch: Identifiable {
     var id = UUID()
     let missionName: String
     let details: String
+    let flickrImages: [String]
 }
 
 extension Launch {
     init?(launchesPast: GetLaunchPastQuery.Data.LaunchesPast?) {
         self.missionName = launchesPast?.missionName ?? "No mission name"
         self.details = launchesPast?.details ?? "No details"
+        self.flickrImages = launchesPast?.links?.flickrImages?.compactMap { $0 } ?? ["https://stackoverflow.design/assets/img/logos/so/logo-stackoverflow.png"]
     }
 }

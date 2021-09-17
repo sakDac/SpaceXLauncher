@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A8B054426EF4AFD00831E14 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8B054326EF4AFD00831E14 /* ImageLoader.swift */; };
 		3ADF0A5626DE389100249E6B /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = 3ADF0A5526DE389100249E6B /* schema.json */; };
 		3ADF0A5F26DE39B800249E6B /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADF0A5E26DE39B800249E6B /* Network.swift */; };
 		3ADF0A6926DE414700249E6B /* GetLaunchesPast.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 3ADF0A6826DE414700249E6B /* GetLaunchesPast.graphql */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3A8B054326EF4AFD00831E14 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		3ADF0A5526DE389100249E6B /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
 		3ADF0A5E26DE39B800249E6B /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		3ADF0A6826DE414700249E6B /* GetLaunchesPast.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = GetLaunchesPast.graphql; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 				3ADF0A5526DE389100249E6B /* schema.json */,
 				3AE639C026D90A77008E165D /* SpaceXLauncherApp.swift */,
 				3AF648AC26E09AD4005FFBBA /* View */,
+				3A8B054326EF4AFD00831E14 /* ImageLoader.swift */,
 			);
 			path = SpaceXLauncher;
 			sourceTree = "<group>";
@@ -345,6 +348,7 @@
 				3AF648B326E09D8D005FFBBA /* LaunchRow.swift in Sources */,
 				3AE639C126D90A77008E165D /* SpaceXLauncherApp.swift in Sources */,
 				3ADF0A8526DE469D00249E6B /* API.swift in Sources */,
+				3A8B054426EF4AFD00831E14 /* ImageLoader.swift in Sources */,
 				3ADF0A5F26DE39B800249E6B /* Network.swift in Sources */,
 				3AF648AE26E09AF8005FFBBA /* LauncherList.swift in Sources */,
 			);
