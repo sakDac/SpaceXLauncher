@@ -21,15 +21,15 @@ struct LauncherList: View {
             if showList {
                 List(launches) { (launch) in
                     LaunchRow(launch: launch)
+                    Divider()
                 }
             } else {
                 Spacer()
             }
-        }).padding(CGFloat(20))
+        }).padding()
     }
     
     // ⚠️ TODO: Implement pagination ⚠️
-    
     func fetchLaunch(count: Int) {
         Network.shared.client.fetch(query: GetLaunchPastQuery(count: count)) { result in
             switch result {
